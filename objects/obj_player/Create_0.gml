@@ -2,7 +2,7 @@
 
 pickupRange = 64;
 // Movement Variables
-moveSpeed = 4;
+moveSpeed = 2;
 
 
 // Keybinds TODO: Make configurable in menu

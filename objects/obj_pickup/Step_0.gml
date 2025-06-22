@@ -7,13 +7,14 @@ if (pickupTarget != noone) {
 	
 	// If player left range, stop attracting
 	if (dist > pickupTarget.pickupRange) {
-		pickupTarget = noone;	
+		pickupTarget = noone;
+		pickupSpeed = 2;
 	}
 }
 
 // If no target, check for one
 if (pickupTarget == noone && _player != noone) {
-	var distToNearest = point_distance(x, y, _player.x, _player.y);
+	var distToNearest = point_distance(x, y, _player.x, _player.y); //Returns diff bt this object and player as a value
 	
 	if (distToNearest < _player.pickupRange) {
 		pickupTarget = _player;	
@@ -25,7 +26,11 @@ if (pickupTarget != noone) {
 	var dir = point_direction(x, y, pickupTarget.x, pickupTarget.y);
 	x += lengthdir_x(pickupSpeed, dir);
 	y += lengthdir_y(pickupSpeed, dir);
-		
+	
+	if (pickupSpeed < maxPickupSpeed) {
+		pickupSpeed += 0.2
+	}
+	
 	// Close enough to pick up
 	if (point_distance(x, y, pickupTarget.x, pickupTarget.y) < 8) {
 		onPickup(pickupTarget); // Player passed in
