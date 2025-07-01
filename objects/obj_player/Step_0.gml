@@ -40,3 +40,31 @@ if (place_meeting(x, y + moveY, obj_blocker)) {
 } else {
 	y += moveY;
 }
+
+// Firing Weapons
+var controller = obj_gameController;
+
+if (controller == noone) exit;
+
+// Loop through all currently owned weapons
+var _weapons = controller.weapons;
+var _weaponKeys = variable_struct_get_names(_weapons);
+var _time = current_time;
+
+var ui = layer_get_id("projectiles");
+
+for (var i = 0; i < array_length(_weaponKeys); i++) {
+	var weaponName = _weaponKeys[i];
+	var weapon = _weapons[? weaponName];
+	
+	if (_time - weapon.lastFired >= weapon.cooldown * 16.6667) {
+		var target = get_nearest_damageable(x, y);
+		
+		if (target != noone) {
+			for (var j = 0; j < weapon.projectileCount; j++) {
+				fire_projectile(weaponName, x, y, target, weapon);	
+			}
+			weapon.lastFired = _time;
+		}
+	}
+}

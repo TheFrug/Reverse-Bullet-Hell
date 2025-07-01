@@ -1,6 +1,7 @@
 // --- PLAYER STATS ---
 
 pickupRange = 64;
+damageMod = 1;
 // Movement Variables
 moveSpeed = 2;
 

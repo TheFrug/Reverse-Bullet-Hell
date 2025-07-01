@@ -14,4 +14,11 @@ if (player != noone) {
     draw_text(uiX, uiY, "Gold: " + string(gold));
     draw_text(uiX, uiY + 20, "XP: " + string(xp));
     draw_text(uiX, uiY + 40, "Pickup Range: " + string(player.pickupRange));
+	    // Debug: Show Magic Missile level (if owned)
+    if (variable_struct_exists(weapons, "magicMissile")) {
+        var mm = weapons.magicMissile;
+        draw_text(uiX, uiY + 60, "Magic Missile Lv: " + string(mm.level));
+    } else {
+        draw_text(uiX, uiY + 60, "Magic Missile: Not Collected");
+    }
 }
