@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"original",
-    "path":"folders/Sprites/Characters/NPCs/original.yy",
+    "name":"Authored",
+    "path":"folders/Sprites/Authored.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"DungeonTileset",
-    "path":"folders/Sprites/Characters/NPCs/DungeonTileset.yy",
+    "name":"NPCs",
+    "path":"folders/Sprites/Characters/NPCs.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
