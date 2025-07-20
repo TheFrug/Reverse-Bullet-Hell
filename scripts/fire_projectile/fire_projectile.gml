@@ -1,3 +1,4 @@
+/*
 // TODO
 
 var weaponName = argument0;
@@ -15,3 +16,5 @@ p.speed = weaponStats.projectileSpeed ?? 6;
 p.damage = weaponStats.damage;
 p.pierce = weaponStats.pierce;
 p.target = target;
+
+*/

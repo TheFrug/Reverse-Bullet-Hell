@@ -5,6 +5,7 @@ damageMod = 1;
 // Movement Variables
 moveSpeed = 2;
 
+gamepad_set_axis_deadzone(0, 0.2);
 
 // Keybinds TODO: Make configurable in menu
 keyUp = ord("W");

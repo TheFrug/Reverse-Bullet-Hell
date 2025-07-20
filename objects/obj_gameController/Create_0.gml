@@ -3,7 +3,6 @@ gold = 0;
 xp = 0;
 
 //Inventory
-
 weapons = {};
 
 
@@ -25,3 +24,7 @@ weaponDictionary = {
         lastFired: -999
     }
 };
+
+//Manage alarm timer w/ loop
+alarmTime = 20;
+alarm[0] = alarmTime;

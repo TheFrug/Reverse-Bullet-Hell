@@ -2,6 +2,9 @@
 hInput = 0;
 vInput = 0;
 
+// Default strength if using keyboard
+var analog_strength = 1;
+
 // Read input based on key mappings
 if (keyboard_check(keyLeft)) {
 	hInput -= 1;	}
@@ -12,6 +15,26 @@ if (keyboard_check(keyUp)) {
 if (keyboard_check(keyDown)) {
 	vInput += 1;	}
 
+// Gamepad override
+
+if (gamepad_is_connected(0)) {
+	var pad_h = gamepad_axis_value(0, gp_axislh);
+	var pad_v = gamepad_axis_value(0, gp_axislv);
+
+	// If there's input from the analog stick, override keyboard
+	if (abs(pad_h) > 0.2 || abs(pad_v) > 0.2) {
+	    hInput = pad_h;
+	    vInput = pad_v;
+		
+		// calculate stick strength (0 to 1)
+		analog_strength = clamp(point_distance(0, 0, pad_h, pad_v), 0, 1);
+	}
+}
+// Flip sprite based on horizontal movement
+if (hInput != 0) {
+	image_xscale = sign(hInput); // 1 = right, -1 = left
+}
+
 // Normalize diagonal movement
 var len = point_distance(0, 0, hInput, vInput);
 if (len > 0) {
@@ -20,8 +43,8 @@ if (len > 0) {
 }
 
 // Move player
-var moveX = hInput * moveSpeed;
-var moveY = vInput * moveSpeed;
+var moveX = hInput * moveSpeed * analog_strength;
+var moveY = vInput * moveSpeed * analog_strength;
 
 // Move on X axis and check for collision
 if (place_meeting(x + moveX, y, obj_blocker)) {
@@ -41,6 +64,7 @@ if (place_meeting(x, y + moveY, obj_blocker)) {
 	y += moveY;
 }
 
+/*
 // Firing Weapons
 var controller = obj_gameController;
 
@@ -68,3 +92,4 @@ for (var i = 0; i < array_length(_weaponKeys); i++) {
 		}
 	}
 }
+*/

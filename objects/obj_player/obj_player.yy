@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player",
-    "path":"sprites/spr_player/spr_player.yy",
+    "name":"npc_elf",
+    "path":"sprites/npc_elf/npc_elf.yy",
   },
   "spriteMaskId":null,
   "visible":true,
