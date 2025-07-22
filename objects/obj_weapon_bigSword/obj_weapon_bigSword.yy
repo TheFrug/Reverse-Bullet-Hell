@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"weapon_sword_big",
-    "path":"sprites/weapon_sword_big/weapon_sword_big.yy",
+    "name":"weapon_sword_big_animated",
+    "path":"sprites/weapon_sword_big_animated/weapon_sword_big_animated.yy",
   },
   "spriteMaskId":null,
   "visible":true,
