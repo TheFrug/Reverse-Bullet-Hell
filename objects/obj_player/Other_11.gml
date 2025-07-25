@@ -1,4 +1,4 @@
-/// @description Hammer
+/// @description Hammer Logic
 
 var hammer = instance_create_layer(
 	x,					// xPosition

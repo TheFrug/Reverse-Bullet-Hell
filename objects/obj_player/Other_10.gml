@@ -1,4 +1,4 @@
-/// @description Slash
+/// @description Slash Logic
 
 var slash = instance_create_layer(
 	x,					// xPosition

@@ -30,6 +30,7 @@ if (gamepad_is_connected(0)) {
 		analog_strength = clamp(point_distance(0, 0, pad_h, pad_v), 0, 1);
 	}
 }
+	
 // Flip sprite based on horizontal movement
 if (hInput != 0) {
 	image_xscale = sign(hInput); // 1 = right, -1 = left

@@ -22,8 +22,18 @@ hInput = 0;
 vInput = 0;
 
 // --- Weapon System ---
-alarmTime0 = 80;
-alarmTime1 = 120;
+alarmTime[0] = 60;
+alarmTime[1] = 40;
+alarmTime[2] = 40;
 
-alarm[0] = alarmTime0;
-alarm[1] = alarmTime1;
+alarm[0] = alarmTime[0];
+alarm[1] = alarmTime[1];
+alarm[2] = alarmTime[2];
+
+slot[0] = "";
+slot[1] = "";
+slot[2] = "";
+
+damage_slash = 3;
+damage_hammer = 5;
+damage_dagger = 1;
