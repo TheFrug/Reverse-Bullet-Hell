@@ -22,9 +22,9 @@ hInput = 0;
 vInput = 0;
 
 // --- Weapon System ---
-alarmTime[0] = 60;
-alarmTime[1] = 40;
-alarmTime[2] = 40;
+alarmTime[0] = 100;
+alarmTime[1] = 80;
+alarmTime[2] = 60;
 
 alarm[0] = alarmTime[0];
 alarm[1] = alarmTime[1];
@@ -34,6 +34,16 @@ slot[0] = "";
 slot[1] = "";
 slot[2] = "";
 
+// --- Weapon Stats ---
+
+// Slash/Big Sword
 damage_slash = 3;
+knockback_slash = 10;
+
+// Hammer
 damage_hammer = 5;
+knockback_hammer = 7;
+
+// Thrown Dagger
 damage_dagger = 1;
+knockback_dagger = 3;

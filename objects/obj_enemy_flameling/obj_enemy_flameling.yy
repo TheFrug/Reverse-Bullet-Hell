@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enemy_fire",
+  "%Name":"obj_enemy_flameling",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_enemy_fire",
+  "name":"obj_enemy_flameling",
   "overriddenProperties":[],
   "parent":{
     "name":"Enemies",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"monster_elemental_fire",
-    "path":"sprites/monster_elemental_fire/monster_elemental_fire.yy",
+    "name":"spr_monster_elemental_fire",
+    "path":"sprites/spr_monster_elemental_fire/spr_monster_elemental_fire.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -7,7 +7,7 @@ var hammer = instance_create_layer(
 	obj_weapon_hammer	// Object to spawn
 );
 
-hammer.direction = irandom_range(45,135);
+hammer.direction = irandom_range(75, 105); // 0E, 90N, 180W, 270S
 hammer.speed = 4;
 hammer.gravity = 0.1;
 hammer.friction = 0.01;

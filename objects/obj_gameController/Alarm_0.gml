@@ -6,6 +6,8 @@ with(obj_enemy_parent){
 	else {image_xscale = 1;}
 
 	depth = -y;
+	
+	if (sprite_index == sprW){	sprite_index = spr; }
 }
 
 obj_player.depth = -obj_player.y;

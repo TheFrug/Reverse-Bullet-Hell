@@ -9,7 +9,7 @@ var player = instance_find(obj_player, 0);
 
 if (player != noone) {
     var uiX = 16;
-    var uiY = 16;
+    var uiY = 16+10;
     
     draw_text(uiX, uiY, "Gold: " + string(gold));
     draw_text(uiX, uiY + 20, "XP: " + string(xp));
