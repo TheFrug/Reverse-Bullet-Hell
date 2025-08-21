@@ -38,7 +38,7 @@ slot[2] = "";
 
 // Slash/Big Sword
 damage_slash = 3;
-knockback_slash = 10;
+knockback_slash = 20;
 
 // Hammer
 damage_hammer = 5;

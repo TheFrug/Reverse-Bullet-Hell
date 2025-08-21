@@ -26,10 +26,12 @@ if _num > 0 // Continue only if enemy found
 			
 			_list[| i].sprite_index = _list[| i].sprW;
 		
-		_list[| i].hitPoints -= damage; // Access the i-th instance in list and reduce hitPoints by damage
-		if (_list[| i].hitPoints <= 0){
+			_list[| i].hitPoints -= damage; // Access the i-th instance in list and reduce hitPoints by damage
+			audio_play_sound(snd_enemy_hit, 10, false);
+			if (_list[| i].hitPoints <= 0){
 			instance_destroy(_list[| i]); // Destroy instance
-		}}
+			}
+		}
 	}
 }
 ds_list_destroy(_list); // Frees memory used by _list to avoid memory leak

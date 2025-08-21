@@ -26,5 +26,6 @@ weaponDictionary = {
 };
 
 //Manage alarm timer w/ loop
-alarmTime = 20;
+alarmTime = 10;
 alarm[0] = alarmTime;
+
