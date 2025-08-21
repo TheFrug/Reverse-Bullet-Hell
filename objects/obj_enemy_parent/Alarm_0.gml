@@ -1,0 +1,1 @@
+can_collide_wp1 = true;
